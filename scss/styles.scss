@@ -41,20 +41,20 @@ body{
 //////////**SMALL SIZE**//////////
 @media screen and (min-width: 0px) and (max-width: 600px) {
   body {
-    background-color: #fff;
+    background-color: orange;
   }
 
   h1 {
-    color: #000;
+    color: #222;
   }
 
     .block_family li{
   display: inline-block;
   color: #fff;
-  background-color: #000;
+  background-color: #222;
   // border-radius: 50%;
   height: 38px;
-  width: 50%;
+  width: 60%;
   // background: linear-gradient(to bottom, $pink 8%, $blue 33%, $purple 66%, $pink 92%);
   // background-size: 200% 200%;
   // animation: rainbow 3s linear infinite;
@@ -67,7 +67,7 @@ body{
 //////////***MEDIUM SIZE***//////////
 @media screen and (min-width: 600px) and (max-width: 900px) {
   body {
-    background-color: #96afff;
+    background-color: orange;
   }
 
   h1 {
@@ -76,11 +76,11 @@ body{
 
     .block_family li{
   display: inline-block;
-  color: #96afff;
-  background-color: #ffe696;
+  color: orange;
+  background-color: #222;
   // border-radius: 50%;
   height: 35px;
-  width: 25%;
+  width: 20%;
   // background: linear-gradient(to bottom, $pink 8%, $blue 33%, $purple 66%, $pink 92%);
   // background-size: 200% 200%;
   // animation: rainbow 3s linear infinite;
@@ -91,25 +91,25 @@ body{
 
 .block_family li:nth-child(2n) {
   background: #fff;
-  color: #96afff;
+  color: orange;
 }
 }
 
 //////////*** BIG SIZE ***//////////
 @media screen and (min-width: 900px){
   body {
-    background-color: #ccf8ff;
+    background-color: #222;
   }
 
   h1 {
     @include bigfontmix($big-font-size);
-    color: #808080;
+    color: orange;
   }
 
   .block_family li{
   display: inline-block;
-  color: #fff;
-  background-color: #FFC0CB;
+  color: #222;
+  background-color: orange;
   // border-radius: 50%;
   height: 38px;
   width: 15%;
@@ -123,7 +123,7 @@ body{
 
 .block_family li:nth-child(3n + 2) {
   background: #fff;
-  color: #808080;
+  color: #222;
 }
 }
 
