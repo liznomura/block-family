@@ -3,22 +3,12 @@
 @import "partials/_clearfix";
 
 // Variables
-$dark-color: #000;
-$light-color: #fff;
-$bright-color: cyan;
+$dark-color: #222;
+$light-color: #f2f2f2;
+$bright-color: orange;
 $global-padding: 10px;
 $big-font-size: 55px;
 $block-font-size: 35px;
-// $font-fam: "Lucida Console", Monaco, monospace;
-$pink: #ffbced;
-$blue: #74e2fa;
-$purple: #7892fd;
-
-body{
-  background-color: #ffb6c1;
-  text-align: center;
-  color: #EEE;
-}
 
 
 // Mixins
@@ -37,99 +27,95 @@ body{
 
 
 // Media Query Ranges
-
-//////////**SMALL SIZE**//////////
 @media screen and (min-width: 0px) and (max-width: 600px) {
   body {
-    background-color: orange;
+    background-color: $bright-color;
   }
 
   h1 {
-    color: #222;
+    color: $dark-color;
   }
 
-    .block_family li{
-  display: inline-block;
-  color: #fff;
-  background-color: #222;
-  // border-radius: 50%;
-  height: 38px;
-  width: 60%;
-  // background: linear-gradient(to bottom, $pink 8%, $blue 33%, $purple 66%, $pink 92%);
-  // background-size: 200% 200%;
-  // animation: rainbow 3s linear infinite;
-  margin: 0px 2.5px 20px 2.5px;
-  align-content: middle;
-  padding: 20px 50px 20px 50px;
+  .block_family li{
+    color: $light-color;
+    background-color: $dark-color;
+    height: 35px;
+    width: 250px;
+    margin: 0px 2.5px 20px 2.5px;
+    align-content: middle;
+    padding: 20px 50px 20px 50px;
+  }
 }
 
-}
+
 //////////***MEDIUM SIZE***//////////
 @media screen and (min-width: 600px) and (max-width: 900px) {
   body {
-    background-color: orange;
+    background-color: $bright-color;
   }
 
   h1 {
-    color: #fff;
+    color: $light-color;
   }
 
-    .block_family li{
-  display: inline-block;
-  color: orange;
-  background-color: #222;
-  // border-radius: 50%;
-  height: 35px;
-  width: 20%;
-  // background: linear-gradient(to bottom, $pink 8%, $blue 33%, $purple 66%, $pink 92%);
-  // background-size: 200% 200%;
-  // animation: rainbow 3s linear infinite;
-  margin: 0px 1px 5px 1px;
-  align-content: middle;
-  padding: 20px 50px 20px 50px;
-}
+  .block_family {
+    max-width: 600px;
+    margin: auto;
+  }
 
-.block_family li:nth-child(2n) {
-  background: #fff;
-  color: orange;
-}
+  .block_family li{
+    color: $bright-color;
+    background-color: $dark-color;
+    height: 35px;
+    width: 150px;
+    margin: 0px 1px 5px 1px;
+    align-content: middle;
+    padding: 20px 50px 20px 50px;
+  }
+
+  .block_family li:nth-child(2n) {
+    background: $light-color;
+    color: $bright-color;
+  }
 }
 
 //////////*** BIG SIZE ***//////////
 @media screen and (min-width: 900px){
   body {
-    background-color: #222;
+    background-color: $dark-color;
   }
 
   h1 {
     @include bigfontmix($big-font-size);
-    color: orange;
+    color: $bright-color;
+  }
+
+  .block_family{
+    max-width:1000px;
+    margin: auto;
   }
 
   .block_family li{
-  display: inline-block;
-  color: #222;
-  background-color: orange;
-  // border-radius: 50%;
-  height: 38px;
-  width: 15%;
-  // background: linear-gradient(to bottom, $pink 8%, $blue 33%, $purple 66%, $pink 92%);
-  // background-size: 200% 200%;
-  // animation: rainbow 3s linear infinite;
-  margin: 0px 3px 10px 3px;
-  align-content: middle;
-  padding: 20px 50px 20px 50px;
-}
+    color: $dark-color;
+    background-color: $bright-color;
+    height: 38px;
+    width: 160px;
+    margin: 0px 3px 10px 3px;
+    align-content: middle;
+    padding: 20px 50px 20px 50px;
+  }
 
-.block_family li:nth-child(3n + 2) {
-  background: #fff;
-  color: #222;
-}
+  .block_family li:nth-child(3n + 2) {
+    background: $light-color;
+    color: $dark-color;
+  }
 }
 
 
 // Style
-
+body {
+  text-align: center;
+}
 
 h1, h2, h3, h4{
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
@@ -146,13 +132,13 @@ h2{
 }
 
 
-.block_family{
-  max-width:1000px;
-  margin:auto;
+.block_family li{
+  display: inline-block;
 }
 
-
-
+  // background: linear-gradient(to bottom, $pink 8%, $blue 33%, $purple 66%, $pink 92%);
+  // background-size: 200% 200%;
+  // animation: rainbow 3s linear infinite;
 
 //animation
 // @keyframes rainbow {
